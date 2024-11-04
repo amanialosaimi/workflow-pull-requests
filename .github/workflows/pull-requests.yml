@@ -5,14 +5,13 @@ on:
     branches:
       - main
     types:
-      - closed
+      - opened
 jobs:
   check-pull-requests:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        run: |
-          echo "Amani Alosaimi"
+        uses:  actions/checkout@v2
       - name: Notify Pull-Requests Creation
         run: |
           echo "A pull-requests has been created for main branch"
